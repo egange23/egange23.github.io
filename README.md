@@ -1,17 +1,51 @@
 # egange23.github.io
-
+<!DOCTYPE html>
 <html>
-<head>
-  <title>My GitHub io Landing Page</title>
-</head>
-<body>
-  <h1>Welcome to My GitHub io Page!</h1>
-  <p>Hello and welcome to my GitHub io page! My name is [Your Name] and I am a [Your Profession/Field]. On this page, you can find out more about me and my work.</p>
-  <h2>About Me</h2>
-  <p>I am a Registered Nurse with a passion for Programing. I have 1 year of experience in the field and have worked on a variety of projects. Some of my notable achievements include This page!.</p>
-  <h2>My Work</h2>
-  <p>I have a range of projects that I am currently working on, including [List of Your Projects]. You can view my code and contributions on my <a href="[Link to Your GitHub Profile]">GitHub profile</a>. Feel free to take a look and leave any comments or suggestions!</p>
-  <h2>Contact Me</h2>
-  <p>If you would like to get in touch with me, you can send me an email at [Your Email Address] or connect with me on <a href="[Link to Your LinkedIn Profile]">LinkedIn</a>.</p>
-</body>
+  <head>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio website! My name is [Your Name] and I am a [Your Profession].</p>
+        <p>I have been interested in [Your Hobby] for as long as I can remember, and I am always looking for new ways to improve my skills and learn more about the subject.</p>
+      </section>
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Here are some examples of my work:</p>
+        <ul>
+          <li><a href="#">Project 1</a></li>
+          <li><a href="#">Project 2</a></li>
+          <li><a href="#">Project 3</a></li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or want to work with me, please feel free to contact me using the form below:</p>
+        <form>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message"></textarea><br>
+          <input type="submit" value="Send">
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright [Your Name] [Current Year]</p>
+    </footer>
+  </body>
 </html>
