@@ -1,8 +1,10 @@
 # egange23.github.io
-<!DOCTYPE html>
+
 <html>
   <head>
     <title>My Portfolio</title>
+    <style> 
+    </style>
   </head>
   <body>
     <header>
