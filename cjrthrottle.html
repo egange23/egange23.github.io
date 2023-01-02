@@ -8,9 +8,31 @@
         background-image: url('images/CJRThrottleSystem/IMG_4655.JPG');
         color:aliceblue;
       }
+
+      .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 20px;
+      margin: 20px;
+    }
+
+    /* Style the images */
+    .image {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Style the image */
+    .image img {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+    }
       
       
     </style>
+    <script src="items.json" type="application/json"></script>
   </head>
   <body>
     <header>
@@ -39,7 +61,75 @@
     </ul>
     <h2>Get One</h2>
     <p>If you are interested in the CJRThrottleSystem <a href="mailto:eayuk@hotmail.com">contact</a> me</p>
-  </body>
 
+    <h2>Gallery</h2>
+    
+    <div class="image-grid">
+      <div class="image">
+        <button class="subtract-button">substract</button><img src="" alt="One sec..."><b id="imageNameNum">0</b><button class="add-button">Add</button>
+      </div>
+    </div>
+    
+ 
+
+  
+
+
+    
+
+  </body>
+  
+  <script>
+    fetch('items.json')
+      .then(response => response.json())
+      .then(items => {
+        // Assume the first item in the list is the desired image file
+        const imageElement = document.querySelector('img');
+        let imageNameNum = document.getElementById('imageNameNum');
+        let i = Number(imageNameNum.innerHTML);
+        
+        //Substrct Button
+        const subtractButton = document.querySelector('.subtract-button');
+        subtractButton.addEventListener('click', subtract1);
+        function subtract1() {
+          if (i>1) {
+            i=i-1;
+            console.log(i)
+            imageNameNum.innerHTML=items[i];
+            imageElement.setAttribute('src', 'images/CJRThrottleSystem/' + items[i]);
+          }
+          else {
+            i = items.length-1;
+            imageNameNum.innerHTML=items[i];
+          }
+        }
+        imageElement.setAttribute('src', 'images/CJRThrottleSystem/' + items[i]);
+
+      
+      //Add Button
+      const addButton = document.querySelector('.add-button');
+      addButton.addEventListener('click', add1);
+      function add1() {
+          if (i<items.length) {
+            i=i+1;
+            console.log(i)
+            imageNameNum.innerHTML=items[i];
+            imageElement.setAttribute('src', 'images/CJRThrottleSystem/' + items[i]);
+          }
+          else {
+            i = 0;
+            imageNameNum.innerHTML=items[i];
+          }
+        }
+        imageElement.setAttribute('src', 'images/CJRThrottleSystem/' + items[i]);
+
+      });
+
+     
+      
+      
+
+    
+  </script>
 
 </html>
