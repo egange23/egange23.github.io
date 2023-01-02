@@ -18,14 +18,14 @@
 
     /* Style the images */
     .image {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 10 4px 6px rgba(10, 0, 0, 0.1);
       border-radius: 10px;
       overflow: hidden;
     }
 
     /* Style the image */
     .image img {
-      width: 90%;
+      width: 100%;
       height: 90%;
       object-fit: cover;
     }
@@ -64,11 +64,19 @@
 
     <h2>Gallery</h2>
     
-    <div class="image-grid">
-      <div class="image">
-        <button class="subtract-button">substract</button><img src="" alt="One sec..."><b id="imageNameNum">0</b><button class="add-button">Add</button>
+    <div class="image-grid" >
+      <div class="image" >
+        <div class="button-container" >
+          <button class="subtract-button">subtract</button>
+        </div>
+        <img src="" alt="One sec...">
+        <b id="imageNameNum"></b>
+        <div class="button-container">
+          <button class="add-button">add</button>
+        </div>
       </div>
     </div>
+    
     
  
 
@@ -87,6 +95,7 @@
         const imageElement = document.querySelector('img');
         let imageNameNum = document.getElementById('imageNameNum');
         let i = Number(imageNameNum.innerHTML);
+        imageNameNum.innerHTML=items[0]
         
         //Substrct Button
         const subtractButton = document.querySelector('.subtract-button');
